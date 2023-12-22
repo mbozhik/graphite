@@ -1,0 +1,28 @@
+---
+import Hero from '../components/Hero.astro'
+import Introduction from '../components/Introduction.astro'
+import Program from '../components/Program.astro'
+import Artists from '../components/Artists.astro'
+import Layout from '../layouts/Layout.astro'
+import Videos from '../components/Videos.astro'
+import Opening from '../components/Opening.astro'
+import Area from '../components/Area.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Layout description="24 ноября в Графите — невероятная вечеринка с Obladaet, Витя АК, Dose и Reptiloid! Билеты 1200 рублей. Присоединяйтесь и отпразднуйте с нами!">
+  <main>
+    <Hero />
+    <!-- <hr class="hidden sm:block mb-10 border-custom-pink border-[1.75px]" /> -->
+    <Introduction />
+    <Program />
+    <Artists />
+    <Videos />
+    <Opening />
+    <Area />
+    <Footer />
+  </main>
+</Layout>
+
+<script src="../utils/anchorLink.js"></script>
+<script src="../utils/addUtm.js"></script>
