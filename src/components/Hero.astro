@@ -2,8 +2,6 @@
 import HeroPosters from './HeroPosters'
 import TextBase from './UI/TextBase.astro'
 
-const screenHeight = 'h-[100svh] h-[100vh] sm:h-auto'
-
 export const blockStyles = 'border-custom-pink border-2 py-5'
 
 const socialData = {
@@ -25,7 +23,7 @@ const socialData = {
 }
 ---
 
-<section data-section="HERO" class="overflow-visible" class:list={screenHeight}>
+<section data-section="HERO" class="h-auto overflow-visible">
   <header class="flex items-center justify-between px-10 mt-10 sm:flex-col-reverse sm:gap-4 sm:py-7 sm:mt-5" class:list={blockStyles}>
     <img class="object-contain w-32 xl:w-28 sm:w-36" src="logo.svg" alt="" />
     <h3 class="text-xl sm:text-base !leading-tight uppercase font-medium text-custom-pink sm:text-center text-end">официальная страница <br class="sm:hidden" /> концертной площадки</h3>

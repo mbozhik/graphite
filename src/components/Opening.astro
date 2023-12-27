@@ -1,11 +1,44 @@
 ---
 import Button from './UI/Button.astro'
 
-const heightScreen = '!h-[70svh] h-[70vh]'
+import RunningLine from './UI/RunningLine.astro'
+import TextBase from './UI/TextBase.astro'
 ---
 
-<section id="OPENING" class=`relative flex sm:!h-auto flex-col overflow-hidden text-white ${heightScreen}`>
-  <div class="z-10 sm:w-[90%] w-[80%] mx-auto justify-start h-full flex flex-col py-16 sm:gap-3 uppercase tracking-tight">
+<section id="OPENING" class="relative flex sm:!h-auto flex-col overflow-hidden mt-10 text-white">
+  <div class="my-14">
+    <div class="grid justify-between grid-cols-2 sm:grid-cols-1 sm:gap-5">
+      <div class="flex flex-col gap-5 pl-28 sm:pl-0 sm:w-[90%] sm:mx-auto">
+        <h2 class="px-4 py-3 text-3xl font-semibold text-justify uppercase sm:text-2xl sm:text-start h-fit bg-custom-pink">Графит — концертное пространство в креативном кластере</h2>
+
+        <ul class="p-3 text-2xl uppercase list-disc bg-black sm:text-lg font w-fit">
+          <li class="ml-6">2000 гостей</li>
+          <li class="ml-6">3 бара</li>
+          <li class="ml-6">2 зала</li>
+          <li class="ml-6">лучший звук</li>
+          <li class="ml-6">крутой свет</li>
+          <li class="ml-6">бесплатная парковка</li>
+        </ul>
+      </div>
+
+      <div class="grid self-center sm:w-[90%] sm:mx-auto w-2/3 h-full px-5 text-justify bg-black xl:py-5 justify-self-center place-content-center">
+        <TextBase classes="font-normal sm:text-lg sm:text-start" text="24 ноября открылось новое концертное пространство в центре городской культуры графит. С 2021 года здесь проходят разнообразные мероприятия: концерты, фестивали, выставки, маркеты, спортивные соревнования, лекции, мастер-классы, вечеринки, стендапы и многое другое." />
+        <!-- <TextBase classes="font-normal sm:text-lg sm:text-start" text="24 ноября открылось новое концертное пространство в центре городской культуры графит. своды зала украшены холстами от уличных художников с 2021 года здесь проходят концерты, фестивали культуры и искусства, выставки, маркеты, спортивные соревнования, лекции, мастер-классы, вечеринки, паблик-токи, стендапы и пр." /> -->
+      </div>
+    </div>
+
+    <picture>
+      <source class="-translate-x-5" media="(max-width: 767px)" srcset="/bg/1080banner.jpg" />
+      <img class="absolute inset-0 -z-10 s-full" src="/bg/1920banner.jpg" alt="" />
+    </picture>
+  </div>
+</section>
+
+<!-- <div class="absolute top-0 grid w-full place-items-start">
+    <RunningLine />
+  </div> -->
+
+<!-- <div class="z-10 sm:w-[90%] w-[80%] mx-auto justify-start h-full flex flex-col py-16 sm:gap-3 uppercase tracking-tight">
     <div class="flex h-full gap-64 sm:gap-7 sm:flex-col">
       <div class="w-[40%] sm:w-full">
         <h2 class="p-3 mb-3 text-6xl font-medium bg-custom-pink sm:text-3xl xl:text-5xl">
@@ -29,4 +62,4 @@ const heightScreen = '!h-[70svh] h-[70vh]'
   </div>
 
   <img class="absolute inset-0 h-full" src="../../bg/1080banner.jpg" alt="" />
-</section>
+ -->
