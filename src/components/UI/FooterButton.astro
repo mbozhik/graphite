@@ -1,0 +1,11 @@
+---
+interface Props {
+  href: string
+  text: string
+  classes?: string
+}
+
+const {href, text, classes} = Astro.props as Props
+---
+
+<a {href} target="_blank" class="block p-3 tracking-tight text-center text-white uppercase duration-200 bg-black border-2 sm:h-fit hover:border-white border-custom-pink" class:list={classes}>{text}</a>
