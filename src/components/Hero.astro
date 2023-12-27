@@ -1,30 +1,70 @@
 ---
 import HeroPosters from './HeroPosters'
-import Button from './UI/Button.astro'
+import TextBase from './UI/TextBase.astro'
 
 const screenHeight = 'h-[100svh] h-[100vh]'
+
+export const blockStyles = 'border-custom-pink border-2 py-5'
+
+const socialData = {
+  1: {
+    href: 'https://t.me/graphite_moscow',
+    src: '/social/tg.svg',
+    nickname: 'graphite_moscow',
+  },
+  2: {
+    href: 'https://vk.com/graphite.moscow',
+    src: '/social/vk.svg',
+    nickname: 'graphite.moscow',
+  },
+  3: {
+    href: 'https://instagram.com/graphite.moscow',
+    src: '/social/inst.svg',
+    nickname: 'graphite.moscow',
+  },
+}
 ---
 
 <section data-section="HERO" class="overflow-visible text-white" class:list={screenHeight}>
-  <header class="flex sm:flex-col-reverse sm:gap-4 items-center justify-between border-2 py-5 sm:py-7 border-custom-pink w-[70vw] px-10 mt-10 mx-auto">
+  <header class="flex items-center justify-between px-10 mt-10 sm:flex-col-reverse sm:gap-4 sm:py-7 sm:mt-5" class:list={blockStyles}>
     <img class="object-contain w-32 xl:w-28 sm:w-36" src="logo.svg" alt="" />
-    <h3 class="text-xl sm:text-base sm:w-4/5 !leading-tight uppercase font-medium text-custom-pink sm:text-center text-end">официальная страница <br class="sm:hidden" /> концертной площадки</h3>
+    <h3 class="text-xl sm:text-base !leading-tight uppercase font-medium text-custom-pink sm:text-center text-end">официальная страница <br class="sm:hidden" /> концертной площадки</h3>
   </header>
 
   <HeroPosters client:load />
 
-  <!-- <Button btn_text="Купить билет" btn_link="https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@12609742?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213" /> -->
+  <div class="flex items-center justify-between px-10 mt-10 sm:flex-col-reverse sm:gap-4 sm:py-7 sm:px-5 sm:mt-5" class:list={blockStyles}>
+    <TextBase text="Привет! Это страница <span>Графита</span> — концертной площадки по адресу <span>Электродная 2, стр. 32.</span> Основной сайт в разработке, здесь вы можете узнать о предстоящих концертах." />
+  </div>
+
+  <div class="flex items-center justify-center gap-10 mt-3 sm:flex-col-reverse sm:gap-2 sm:items-start sm:pl-5 sm:py-7 sm:mt-5" class:list={blockStyles}>
+    {
+      Object.values(socialData).map(({href, src, nickname}) => {
+        return (
+          <a {href} class="flex items-center gap-2 sm:gap-4" target="_blank">
+            <img class="s-5" src={src} alt={nickname} />
+            <TextBase text={nickname} classes="duration-150 hover:text-custom-pink" />
+          </a>
+        )
+      })
+    }
+  </div>
 </section>
 
 <style is:global>
+  span {
+    @apply text-custom-pink;
+  }
   .swiper {
-    overflow: visible;
+    @apply overflow-visible;
   }
   .swiper-pagination-bullet {
     @apply !bg-black;
   }
 
-  .swiper-pagination-bullet-active {
-    @apply !bg-black;
+  @media (max-width: 768px) {
+    .swiper-pagination-bullet {
+      @apply hidden;
+    }
   }
 </style>

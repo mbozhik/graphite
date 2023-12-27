@@ -24,7 +24,23 @@ export default function App() {
 
   return (
     <>
-      <Swiper className="my-10 flex gap-5 sm:my-5 w-[70vw] h-[60vh] xl:h-[65vh] sm:h-[60vh]" slidesPerView={3} spaceBetween={30} autoplay={{delay: 1500}} pagination={{clickable: true}} grabCursor={true} loop={true} modules={[Pagination, Autoplay]}>
+      <Swiper
+        className="my-10 flex gap-5 h-[60vh] xl:h-[65vh] sm:h-fit"
+        spaceBetween={30}
+        autoplay={{delay: 1500}}
+        pagination={{clickable: true}}
+        grabCursor={true}
+        loop={true}
+        modules={[Pagination, Autoplay]}
+        breakpoints={{
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+      >
         {postersData.map((poster) => (
           <SwiperSlide key={poster.id}>
             <a href={poster.link} target="_blank" title={'link' + poster.id}>
