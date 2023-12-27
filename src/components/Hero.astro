@@ -1,52 +1,30 @@
 ---
+import HeroPosters from './HeroPosters'
 import Button from './UI/Button.astro'
-import RunningLine from './UI/RunningLine.astro'
 
-const heightScreen = 'h-[100svh] h-[100vh]'
+const screenHeight = 'h-[100svh] h-[100vh]'
 ---
 
-<section data-section="HERO" class=`relative flex flex-col overflow-hidden text-white ${heightScreen}`>
-  <div class="flex flex-col z-[99] justify-between h-full mt-6 sm:mt-5 xs:mb-[10vh] sm:mb-[17vh] lg:mb-[25vh] xl:mb-[26vh] mb-[25vh]">
-    <div class="sm:w-[90%] w-[65%] flex justify-between mx-auto font-medium sm:text-xl xl:text-4xl text-5xl">
-      <a class="px-2 py-1 bg-black border-2 border-custom-pink w-fit" href="https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@12609742?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213" target="_blank">24 НОЯБРЯ</a>
-      <a class="px-2 py-1 bg-black border-2 border-custom-pink w-fit" href="#OPENING">ГРАФИТ</a>
-    </div>
-    <Button btn_text="Купить билет" btn_link="https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@12609742?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213" />
-  </div>
+<section data-section="HERO" class="overflow-visible text-white" class:list={screenHeight}>
+  <header class="flex sm:flex-col-reverse sm:gap-4 items-center justify-between border-2 py-5 sm:py-7 border-custom-pink w-[70vw] px-10 mt-10 mx-auto">
+    <img class="object-contain w-32 xl:w-28 sm:w-36" src="logo.svg" alt="" />
+    <h3 class="text-xl sm:text-base sm:w-4/5 !leading-tight uppercase font-medium text-custom-pink sm:text-center text-end">официальная страница <br class="sm:hidden" /> концертной площадки</h3>
+  </header>
 
-  <div class="sm:hidden absolute grid-cols-4 text-6xl xl:text-5xl font-semibold text-center xl:bottom-[11vh] bottom-[10vh] w-[95%] h-[80vh] z-[98] grid place-items-end left-0 right-0 mx-auto">
-    <div class="flex flex-col justify-self-center">
-      <h1 class="">ВИТЯ АК</h1>
-      <span class="text-4xl font-normal">(AK-47)</span>
-    </div>
-    <div class="flex flex-col justify-self-center">
-      <h1 class="ml-10">OBLADAET</h1>
-      <span class="text-4xl font-normal opacity-0">OPACITY_0</span>
-    </div>
-    <div class="flex flex-col justify-self-center">
-      <h1 class="ml-10">DOSE</h1>
-      <span class="text-4xl font-normal opacity-0">OPACITY_0</span>
-    </div>
-    <div class="flex flex-col ml-16 justify-self-center">
-      <h1 class="">REPTILOID</h1>
-      <span class="text-4xl font-normal">(DJ SET)</span>
-    </div>
-  </div>
+  <HeroPosters client:load />
 
-  <div class="xs:hidden absolute sm:bottom-14 bottom-7 grid w-full h-screen z-[98] place-items-end">
-    <div class="flex sm:grid sm:grid-cols-2 sm:items-center justify-center gap-14 sm:gap-x-10 sm:gap-y-3 xl:h-7 h-10 w-full">
-      <img class="justify-self-end sm:w-24 object-contain" src="../../logo/1.png" alt="" />
-      <img class="justify-self-start sm:w-24 object-contain" src="../../logo/2.png" alt="" />
-      <img class="justify-self-end sm:w-24 w-32 object-contain" src="../../logo/3.png" alt="" />
-      <img class="justify-self-start sm:w-24 w-32 object-contain" src="../../logo/4.svg" alt="" />
-    </div>
-  </div>
-
-  <div class="absolute inset-0 z-[6] xs:-mt-24 sm:-mt-32 lg:mt-10 xl:mt-7 grid h-screen overflow-hidden">
-    <picture>
-      <source class="-translate-x-5" media="(max-width: 767px)" srcset="../../bg/1080banner.png" />
-      <img class="object-contain w-full h-full" src="../../bg/1920banner.png" alt="" />
-    </picture>
-  </div>
-  <img class="absolute inset-0 hidden object-cover w-full h-full sm:block -z-50" src="../../bg/1080banner_hero.jpg" alt="" />
+  <!-- <Button btn_text="Купить билет" btn_link="https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@12609742?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213" /> -->
 </section>
+
+<style is:global>
+  .swiper {
+    overflow: visible;
+  }
+  .swiper-pagination-bullet {
+    @apply !bg-black;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply !bg-black;
+  }
+</style>
