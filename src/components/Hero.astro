@@ -35,7 +35,7 @@ const socialData = {
     <TextBase text="Привет! Это страница <span>Графита</span> — концертной площадки по адресу <span>Электродная 2, стр. 32.</span> Основной сайт в разработке, здесь вы можете узнать о предстоящих концертах." />
   </div>
 
-  <div class="flex items-center justify-center gap-10 mt-3 sm:flex-col-reverse sm:gap-2 sm:items-start sm:pl-5 sm:py-7 sm:mt-5" class:list={blockStyles}>
+  <div class="flex items-center justify-center gap-10 mt-3 sm:flex-col sm:gap-2 sm:items-start sm:pl-5 sm:py-7 sm:mt-5" class:list={blockStyles}>
     {
       Object.values(socialData).map(({href, src, nickname}) => {
         return (
