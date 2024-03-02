@@ -40,7 +40,7 @@ export default function PostersSlider() {
         {postersData.map((poster, index) => (
           <SwiperSlide key={index}>
             <a href={poster.link} target="_blank" title={'link' + index}>
-              <img className="object-contain duration-500 hover:scale-[102%] s-full" src={`/posters/${poster.image}.jpg`} alt="" />
+              <img className="object-contain duration-500 hover:scale-[102%] s-full" src={`/posters/${poster.image}.jpg`} loading={poster.lazy === false ? "eager" : "lazy"} alt={poster.image} />
             </a>
           </SwiperSlide>
         ))}
