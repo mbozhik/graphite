@@ -50,13 +50,13 @@ export const postersData: Poster[] = [
   {
     id: 7,
     date: '31.03',
-    link: 'https://afisha.yandex.ru/moscow/concert/playingtheangel-2024-03-31?source=place',
+    link: 'https://vk.com/app51856676_-224604814',
     image: 'playing_the_angel',
   },
   {
     id: 8,
     date: '06.04',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16597115?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NDkzMzAyfDY0MjM3OTV8MTcxMjQzMDAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
     image: 'quok_a4',
   },
   {
