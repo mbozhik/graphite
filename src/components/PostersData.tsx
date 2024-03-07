@@ -24,7 +24,7 @@ export const postersData: Poster[] = [
   {
     id: 3,
     date: '15.03',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NDcxOTIyfDU3NzMzOTR8MTcxMDUyMjAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16778850?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
     image: 'kirpici',
     lazy: false,
   },
