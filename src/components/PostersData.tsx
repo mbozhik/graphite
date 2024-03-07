@@ -10,7 +10,7 @@ export const postersData: Poster[] = [
   {
     id: 1,
     date: '8.03',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NDY5MDE1fDU3NzMzOTR8MTcwOTkxNzIwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16763273?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
     image: 'bahit_kompot',
     lazy: false,
   },
