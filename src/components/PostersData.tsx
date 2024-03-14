@@ -11,6 +11,11 @@ export const postersData: Poster[] = [
     link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16778850?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
   },
   {
+    image: 'alblak',
+    date: '22.03',
+    link: 'https://www.afisha.ru/w/creations/userevent/208/2/a42ade48-08e9-485f-a8ff-0f8db4c20b75/https%253a%252f%252fwww.afisha.ru',
+  },
+  {
     image: 'kangi_kambulat',
     date: '23.03',
     link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16778617?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
