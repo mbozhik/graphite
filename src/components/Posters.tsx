@@ -38,10 +38,15 @@ export default function PostersSlider() {
         modules={[Pagination, Autoplay]}
         slidesPerView={isMobile ? 1 : 3}
       >
-        {postersData.map((poster, index) => (
+    {postersData.map((poster, index) => (
           <SwiperSlide key={index}>
             <a href={poster.link} target="_blank" title={'link' + index}>
-              <img className="object-cover duration-500 hover:scale-[102%] s-full" src={`/posters/${poster.image}.jpg`} loading={poster.lazy === false ? "eager" : "lazy"} alt={poster.image} />
+              <img
+                className="object-cover duration-500 hover:scale-[102%] s-full"
+                src={`/posters/${poster.image}.jpg`}
+                loading={index < 4 ? "eager" : "lazy"}
+                alt={poster.image}
+              />
             </a>
           </SwiperSlide>
         ))}
