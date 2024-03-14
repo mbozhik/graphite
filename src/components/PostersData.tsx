@@ -23,7 +23,7 @@ export const postersData: Poster[] = [
   {
     image: 'maty_a4',
     date: '30.03',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NDgwMzU3fDU3NzMzOTR8MTcxMTgxODAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16954960?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
   },
   {
     image: 'playing_the_angel',
@@ -43,7 +43,7 @@ export const postersData: Poster[] = [
   {
     image: 'radio_chacha',
     date: '20.04',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NDcxOTAwfDU3NzMzOTR8MTcxMzYzMjQwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16955192?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
   },
   {
     image: 'temnee',
