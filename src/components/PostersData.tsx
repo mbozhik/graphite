@@ -8,20 +8,6 @@ interface Poster {
 
 export const postersData: Poster[] = [
   {
-    id: 1,
-    date: '8.03',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16763273?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
-    image: 'bahit_kompot',
-    lazy: false,
-  },
-  {
-    id: 2,
-    date: '9.03',
-    link: 'https://moscow.qtickets.events/95719-komsomolsk-grafit-9-marta',
-    image: 'komsomolsk',
-    lazy: false,
-  },
-  {
     id: 3,
     date: '15.03',
     link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16778850?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
