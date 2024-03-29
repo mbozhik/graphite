@@ -47,7 +47,7 @@ export const postersData: Poster[] = [
   },
   {
     image: 'slezi',
-    date: '01.may',
+    date: '01.june',
     link: 'http://slezyfest.ru/',
   },
 ]

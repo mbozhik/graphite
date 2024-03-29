@@ -1,14 +1,15 @@
 import {useEffect, useState} from 'react'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
+import {Pagination, Autoplay} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import {Pagination, Autoplay} from 'swiper/modules'
 
 import {postersData} from './PostersData'
 
 export default function PostersSlider() {
   const [isMobile, setIsMobile] = useState(false)
+  const [sortedPostersData, setSortedPostersData] = useState([])
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,12 +17,18 @@ export default function PostersSlider() {
     }
 
     handleResize()
+  }, [])
 
-    window.addEventListener('resize', handleResize)
+  useEffect(() => {
+    const sortedData = [...postersData].sort((a, b) => {
+      const [dayA, monthA] = a.date.split('.')
+      const [dayB, monthB] = b.date.split('.')
+      const dateA = new Date(Date.parse(`2024-${monthA}-${dayA}`))
+      const dateB = new Date(Date.parse(`2024-${monthB}-${dayB}`))
+      return dateA.getTime() - dateB.getTime()
+    })
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
+    setSortedPostersData(sortedData)
   }, [])
 
   return (
@@ -38,15 +45,10 @@ export default function PostersSlider() {
         modules={[Pagination, Autoplay]}
         slidesPerView={isMobile ? 1 : 3}
       >
-    {postersData.map((poster, index) => (
+        {sortedPostersData.map((poster, index) => (
           <SwiperSlide key={index}>
             <a href={poster.link} target="_blank" title={'link' + index}>
-              <img
-                className="object-cover duration-500 hover:scale-[102%] s-full"
-                src={`/posters/${poster.image}.jpg`}
-                loading={index < 4 ? "eager" : "lazy"}
-                alt={poster.image}
-              />
+              <img className="object-cover duration-500 hover:scale-[102%] s-full" src={`/posters/${poster.image}.jpg`} loading={index < 4 ? 'eager' : 'lazy'} alt={poster.image} />
             </a>
           </SwiperSlide>
         ))}
