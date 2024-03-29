@@ -21,11 +21,6 @@ export const postersData: Poster[] = [
     link: 'https://vk.com/app51856676_-224604814',
   },
   {
-    image: 'boogie',
-    date: '13.april',
-    link: 'https://afisha.yandex.ru/moscow/concert/boogie-party-vol-3',
-  },
-  {
     image: 'radio_chacha',
     date: '20.april',
     link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16955192?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
@@ -33,7 +28,7 @@ export const postersData: Poster[] = [
   {
     image: 'kangi_kambulat',
     date: '10.may',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16778617?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16698171?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
   },
   {
     image: 'temnee',
@@ -43,11 +38,16 @@ export const postersData: Poster[] = [
   {
     image: 'quok',
     date: '31.may',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NDkzMzAyfDY0MjM3OTV8MTcxMjQzMDAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16698171?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
   },
   {
     image: 'slezi',
     date: '01.june',
     link: 'http://slezyfest.ru/',
+  },
+  {
+    image: 'boogie',
+    date: '13.october',
+    link: 'https://afisha.yandex.ru/moscow/concert/boogie-party-vol-3',
   },
 ]
