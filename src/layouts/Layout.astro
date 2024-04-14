@@ -2,6 +2,7 @@
 import {ViewTransitions} from 'astro:transitions'
 import Fonts from './Fonts.astro'
 import YandexMetrika from './YandexMetrika.astro'
+import Bozzhik from '../components/UI/Bozzhik'
 
 interface Props {
   page_name?: string
@@ -46,6 +47,7 @@ const siteName = 'GRAPHITE'
   <body class="text-white bg-black font-grotesque">
     <main class="w-[70vw] xl:w-[80vw] sm:w-[92%] mx-auto">
       <slot />
+      <Bozzhik client:idle />
     </main>
     <Fonts />
     <YandexMetrika />
