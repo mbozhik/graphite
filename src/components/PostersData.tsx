@@ -2,13 +2,15 @@ interface Poster {
   date: string
   link?: string
   image: string
+  disabled?: boolean
 }
 
 export const postersData: Poster[] = [
   {
     image: 'radio_chacha',
     date: '20.april',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16955192?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
+    link: '',
+    disabled: true,
   },
   {
     image: 'kangi_kambulat',
