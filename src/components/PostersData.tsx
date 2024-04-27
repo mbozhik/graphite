@@ -7,12 +7,6 @@ interface Poster {
 
 export const postersData: Poster[] = [
   {
-    image: 'radio_chacha',
-    date: '20.april',
-    link: '',
-    disabled: true,
-  },
-  {
     image: 'kangi_kambulat',
     date: '10.may',
     link: 'https://widget.afisha.yandex.ru/w/sessions/ticketsteam-5811@16778617?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56&regionId=213',
