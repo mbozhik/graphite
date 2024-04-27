@@ -28,6 +28,21 @@ export const postersData: Poster[] = [
     link: 'http://slezyfest.ru/',
   },
   {
+    image: 'bad_balance',
+    date: '14.june',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NTE3MTA4fDY0NzAyNDh8MTcxODM4MDgwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+  },
+  {
+    image: 'elektroniki',
+    date: '28.june',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NTE0NjgyfDY0NzAyNDh8MTcxOTU5NDAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+  },
+  {
+    image: 'sutkin',
+    date: '26.september',
+    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NTIyNTMwfDY0NzAyNDh8MTcyNzM3MDAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
+  },
+  {
     image: 'boogie',
     date: '5.october',
     link: 'https://afisha.yandex.ru/moscow/concert/boogie-party-vol-3',
