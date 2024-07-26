@@ -1,4 +1,4 @@
-interface Poster {
+export type Poster = {
   image: string
   date: string
   link?: string
@@ -29,5 +29,6 @@ export const postersData: Poster[] = [
   {
     image: 'kirpichi',
     date: '29.november',
+    disabled: true,
   },
 ]
