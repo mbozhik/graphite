@@ -41,7 +41,7 @@ export default function PostersSlider() {
       >
         {sortedPosters.map((poster, index) => (
           <SwiperSlide key={index}>
-            <a href={poster.link} className={cn('block overflow-hidden', poster.disabled ? 'pointer-events-none cursor-none' : '')} target="_blank" title={'link' + index}>
+            <a href={poster.link} className={cn('block overflow-hidden', poster.disabled ? 'pointer-events-none cursor-none' : '')} target="_blank" title={poster.image}>
               <img className="object-contain duration-500 hover:scale-[102%] s-full" src={`/posters/${poster.image}.jpg`} loading={index < 4 ? 'eager' : 'lazy'} alt={poster.image} />
             </a>
           </SwiperSlide>
