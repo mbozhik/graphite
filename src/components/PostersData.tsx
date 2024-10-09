@@ -7,16 +7,6 @@ export type Poster = {
 
 export const postersData: Poster[] = [
   {
-    image: 'sutkin',
-    date: '26.september',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NTIyNTMwfDY0NzAyNDh8MTcyNzM3MDAwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
-  },
-  {
-    image: 'saluki',
-    date: '4.october',
-    link: 'https://widget.afisha.yandex.ru/w/sessions/NjM5MDh8NTYwNzQ5fDY0MjM3OTV8MTcyODA2ODQwMDAwMA==?clientKey=058374e2-3eea-4d37-ae2f-3e21651b7c56',
-  },
-  {
     image: 'boogie_party',
     date: '12.october',
     link: 'https://boogieparty3.ticketscloud.org',
