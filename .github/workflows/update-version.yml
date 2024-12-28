@@ -1,0 +1,39 @@
+name: Update Version and Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Get Commit Number
+        run: |
+          echo "COMMIT_NUMBER=$(git rev-list --count HEAD)" >> $GITHUB_ENV
+
+      - name: Update Version in package.json
+        run: |
+          COMMIT_NUMBER=${{ env.COMMIT_NUMBER }}
+          jq ".version = \"0.0.${COMMIT_NUMBER}\"" package.json > package.tmp.json
+          mv package.tmp.json package.json
+
+      - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json
+          git commit -m "Update version to 0.0.${{ env.COMMIT_NUMBER }}"
+          git push origin main
