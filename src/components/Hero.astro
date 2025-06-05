@@ -1,5 +1,5 @@
 ---
-import Posters from './Posters'
+import {Slider} from './Posters'
 import TextBase from './UI/TextBase.astro'
 
 export const blockStyles = 'border-custom-pink border-2 py-5'
@@ -29,7 +29,7 @@ const socialData = {
     <h3 class="text-xl sm:text-base !leading-tight uppercase font-medium text-custom-pink sm:text-center text-end">официальная страница <br class="sm:hidden" /> концертной площадки</h3>
   </header>
 
-  <Posters client:load />
+  <Slider client:load />
 
   <div class="flex items-center justify-between px-10 mt-10 sm:flex-col-reverse sm:gap-4 sm:py-7 sm:px-5 sm:mt-5" class:list={blockStyles}>
     <TextBase text="Привет! Это страница <span>Графита</span> — концертной площадки по адресу <span>Электродная 2, стр. 32.</span> Основной сайт в разработке, здесь вы можете узнать о предстоящих концертах." />

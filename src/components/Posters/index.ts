@@ -1,3 +1,5 @@
+export {Slider} from './Slider'
+
 export type Poster = {
   image: string
   date: string
@@ -5,7 +7,7 @@ export type Poster = {
   disabled?: boolean
 }
 
-export const postersData: Poster[] = [
+export const POSTERS_DATA: Poster[] = [
   {
     image: 'mafanya',
     date: '26.january',

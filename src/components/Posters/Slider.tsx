@@ -1,6 +1,6 @@
 import {isMobile} from '@bozzhik/is-mobile'
 
-import {cn} from '../utils/cn'
+import {cn} from '../../utils/cn'
 import {useEffect, useState} from 'react'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
@@ -8,14 +8,13 @@ import {Pagination, Autoplay} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-import {postersData} from './PostersData'
-import type {Poster} from './PostersData'
+import {type Poster, POSTERS_DATA} from '.'
 
-export default function PostersSlider() {
+export function Slider() {
   const [sortedPosters, setSortedPosters] = useState<Poster[]>([])
 
   useEffect(() => {
-    const sortedData = [...postersData].sort((a, b) => {
+    const sortedData = [...POSTERS_DATA].sort((a, b) => {
       const [dayA, monthA] = a.date.split('.')
       const [dayB, monthB] = b.date.split('.')
       const dateA = new Date(Date.parse(`2024-${monthA}-${dayA}`))
