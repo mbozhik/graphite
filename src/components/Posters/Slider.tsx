@@ -28,20 +28,26 @@ export function Slider() {
   return (
     <div className="my-10 overflow-hidden">
       <Swiper
-        className="h-[60vh] xl:h-[65vh] sm:h-fit"
-        spaceBetween={30}
+        className="h-[59.5vh] xl:h-[64vh] sm:h-fit"
+        spaceBetween={25}
         autoplay={{delay: 2000}}
         speed={700}
         loop={isMobile ? true : false} // based on @bozzhik/is-mobile
         pagination={{clickable: true}}
         grabCursor={true}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         slidesPerView={isMobile ? 1 : 3} // based on @bozzhik/is-mobile
       >
         {sortedPosters.map((poster, index) => (
           <SwiperSlide key={index}>
-            <a href={poster.link} className={cn('block overflow-hidden', poster.disabled ? 'pointer-events-none cursor-none' : '')} target="_blank" title={poster.image}>
-              <img className="object-contain duration-500 ease-in-out hover:scale-[101.5%] s-full" src={`/posters/${poster.image}.jpg`} loading={index < 4 ? 'eager' : 'lazy'} alt={poster.image} />
+            <a href={poster.link} className={cn('block overflow-hidden group', poster.disabled ? 'pointer-events-none cursor-none' : '')} target="_blank" title={poster.image}>
+              <img className="object-contain duration-500 ease-in-out group-hover:scale-[1.01] s-full" src={`/posters/${poster.image}.jpg`} loading={index < 4 ? 'eager' : 'lazy'} alt={poster.image} />
+
+              {poster.area && (
+                <div className="relative z-20 grid w-full -mt-3 sm:-mt-2 place-items-center">
+                  <div className={cn('px-1.5 py-[1px] sm:pt-0.5', 'group-hover:scale-[1.05] duration-300', 'text-base sm:text-sm bg-custom-pink rounded-[4px]')}>{poster.area}</div>
+                </div>
+              )}
             </a>
           </SwiperSlide>
         ))}

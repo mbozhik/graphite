@@ -4,7 +4,7 @@ export type Poster = {
   image: string
   date: string
   link?: string
-  area?: string
+  area?: 'ДВОР' | 'ХОЛЛ'
   disabled?: boolean
 }
 
