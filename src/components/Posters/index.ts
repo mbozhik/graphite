@@ -4,11 +4,17 @@ export type Poster = {
   image: string
   date: string
   link?: string
-  area?: 'ДВОР' | 'ХОЛЛ'
+  area?: 'ДВОР' | 'ХОЛЛ' | 'ВСЯ ТЕРРИТОРИЯ'
   disabled?: boolean
 }
 
 export const POSTERS_DATA: Poster[] = [
+  {
+    image: 'shayni',
+    date: '13.june',
+    link: 'https://moscow.qtickets.events/171034-shayni-landyartparty',
+    area: 'ДВОР',
+  },
   {
     image: 'ishome',
     date: '04.july',
@@ -38,5 +44,11 @@ export const POSTERS_DATA: Poster[] = [
     date: '26.july',
     link: 'https://russianstyle.fun',
     area: 'ДВОР',
+  },
+  {
+    image: 'minutnahistoria',
+    date: '09.august',
+    link: 'https://vk.com/minutehistorfest?ref=group_menu&w=app5732604_-230146808',
+    area: 'ВСЯ ТЕРРИТОРИЯ',
   },
 ]
