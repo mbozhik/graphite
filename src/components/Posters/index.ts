@@ -10,21 +10,21 @@ export type Poster = {
 
 export const POSTERS_DATA: Poster[] = [
   {
-    image: 'bastard',
-    date: '08.august',
-    link: 'https://madstreambooking.com/theodorbastard/?utm_source=yandex&utm_medium=cpc&utm_campaign=S_TB_SU_25_MSK&utm_content=Москва&utm_term=теодор%20бастард%20билеты&yclid=5872524981981413375',
-    area: 'ДВОР',
+    image: 'linda',
+    date: '27.september',
+    link: 'https://linda.ticketscloud.org',
+    area: 'ХОЛЛ',
   },
   {
-    image: 'dragni',
-    date: '10.august',
-    link: 'https://dragnitour.ru',
-    area: 'ДВОР',
+    image: 'motorama',
+    date: '5.october',
+    link: 'https://vk.cc/cP9Wv9',
+    area: 'ХОЛЛ',
   },
-  // {
-  //   image: 'minutnahistoria',
-  //   date: '09.august',
-  //   link: 'https://vk.com/minutehistorfest?ref=group_menu&w=app5732604_-230146808',
-  //   area: 'ВСЯ ТЕРРИТОРИЯ',
-  // },
+  {
+    image: 'inkognito',
+    date: '17.october',
+    link: 'https://redkassa.ru/events/bilety_na_concert_inkognito_grafit',
+    area: 'ХОЛЛ',
+  },
 ]
